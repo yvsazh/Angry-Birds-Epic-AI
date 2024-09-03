@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes pulse {
+    0% {
+      transform: rotate(-30deg) scale(1);
+    }
+    50% {
+      transform: rotate(-30deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(-30deg) scale(1);
+    }
+}
+
+@font-face {
+    font-family: 'AngryBirds';
+    src: url('./assets/font.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'AngryBirds', sans-serif;
+}
+
+/* .wrapper-out {
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 1500px;
+} */
+
+.content {
+    width: 1500px;
+    height: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.game {
+    padding: 5px;
+    width: 1000px;
+}
+
+.info {
+    width: 350px;
+    height: 700px;
+    font-size: 25px;
+}
+
+.info > button {
+    display: block;
+    height: 70px;
+    font-size: 30px;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: 'AngryBirds', sans-serif;
+    color: white;
+    background-color: rgb(255, 208, 0);
+    border: 3px solid rgb(87, 44, 21);
+    border-radius: 10px;
+}
+
+.loseStreakp {
+    font-size: 50px;
+    color: red;
+    animation: pulse 1s infinite;
+    position: absolute;
+    top: 600px;
+    left: 800px;
+    display: none;
+    font-family: 'AngryBirds', sans-serif;
+}
+
+.winStreakp {
+    font-size: 50px;
+    color: rgb(37, 224, 37);
+    position: absolute;
+    top: 600px;
+    left: 800px;
+    display: none;
+    animation: pulse 1s infinite;
+    font-family: 'AngryBirds', sans-serif;
+}

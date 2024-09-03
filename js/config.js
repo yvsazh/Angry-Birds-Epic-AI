@@ -1,0 +1,2 @@
+var nnBirdsChosen = [];
+var enemyBirdsChosen = [];

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angry Birds Epic</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="wrapper-out">
+        <div class="wrapper">
+            <p class="loseStreakp">LOSE STREAK <span id="loseStreak" style="font-weight: bold;">0</span>!!!</p>
+            <p class="winStreakp">WIN STREAK <span id="winStreak" style="font-weight: bold;">0</span>!!!</p>
+            <div class="content">
+                <div class="game" id="game">
+                </div>
+                <div class="info">
+                    <br>
+                    <br>
+                    <p>GAMES PLAYED: <span id="games" style="font-weight: bold;">0</span></p>
+                    <p>NN WON: <span id="nnWon" style="font-weight: bold;">0</span> times</p>
+                    <p>NN LOST: <span id="nnLost" style="font-weight: bold;">0</span> times</p>
+                    <p>DRAW WAS: <span id="nothing" style="font-weight: bold;">0</span> times</p>
+                    <p>NN TRAINED: <span id="nnTrain" style="font-weight: bold;">0</span> times</p>
+                    <button id="quickMode" onclick="visualization = true; quickMode = !quickMode; updateInterface();">QUICK MODE OFF</button>
+                    <button id="visualization" onclick="visualization = !visualization; sound=false; quickMode = false; updateInterface();">VERY QUICK MODE OFF</button>
+                    <p style="font-size: 13px;">When <b>Quick Mode</b> or <b>Very Quick Mode</b> is enabled, the game does not wait for the birds' animations to finish. As a result, the game may appear illogical, but it moves quickly. You can turn Quick Modes on and off at any time.</p>
+                    <button id = "soundButton" onclick="sound = !sound; updateInterface();">SOUND ON</button>
+                    <button id = "musicButton" onclick="music = !music; updateInterface();">MUSIC ON</button>
+                    <button onclick="window.location.pathname = '/';">CHOOSE ANOTHER BIRDS</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="graphics" style="width: 1500px;">
+                <p style="font-size: 23px; margin-left:40px;">Rewards:</p>
+                <div id="rewardPlot" style="width: 100%; height: 300px;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./libs/jQuery.min.js"></script>
+    <script src="./libs/p5.js"></script>
+    <script src="./libs/p5.sound.js"></script>
+    <script src="./libs/planck.js"></script>
+    <script src="./libs/p5play.js"></script>
+    <script src="./libs/tensorflow.js"></script>
+    <script src="./libs/ppo.js"></script>
+    <script src="./libs/plotly.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/effect.js"></script>
+    <script src="./js/effects/shield.js"></script>
+    <script src="./js/effects/powerup.js"></script>
+    <script src="./js/fighter.js"></script>
+    <script src="./js/bird.js"></script>
+    <script src="./js/birds/red.js"></script>
+    <script src="./js/birds/bomb.js"></script>
+    <script src="./js/birds/matilda.js"></script>
+    <script src="./js/env.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
